@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+    <!--<link rel="Stylesheet" type="text/css" href=".\css\style02.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="Stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src=".\script.js"></script>
+    <title>Não estamos sós</title>
+</head>
+
+<body>
+    <div class="Relatos">
+        <h1 id="title">Faça seu Relato</h1>
+        <form>
+            <p>
+                <textarea style="overflow: scroll; margin: 0px; height: 164px; width: 261px;" id="Relato"
+                    placeholder="Nos conte o que viu..." cols="30" rows="5"></textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="Anonimo" checked> Anonimo
+                <div id="Email" >
+
+                </div>
+            </p>
+            <p>
+                Categoria:
+                <select id="Tipo">
+                    <option value="Outros">Outros</option>
+                    <option value="Racismo">Racismo</option>
+                    <option value="Machismo">Machismo</option>
+                    <option value="Homofobia">Homofobia</option>
+                    <option value="Gordofobia">Gordofobia</option>
+                </select>
+            </p>
+            <p>
+                <input type="button" onclick="enviarRelato()" value="Enviar">
+            </p>
+        </form>
+    </div>
+    <div id="timeline">
+
+    </div>
+</body>
+
+</html>
