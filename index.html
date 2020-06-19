@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
-<head>
-    <!--<link rel="Stylesheet" type="text/css" href=".\css\style02.css">-->
+<head>    
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="Stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src=".\script.js"></script>
-    <title>Não estamos sós</title>
+    <link rel="Stylesheet" type="text/css" href=".\style.css">
+    <title>Diz ai! Não se Khale!</title>
 </head>
 
 <body>
-    <div class="Relatos">
-        <h1 id="title">Faça seu Relato</h1>
-        <form>
-            <p>
-                <textarea style="overflow: scroll; margin: 0px; height: 164px; width: 261px;" id="Relato"
+    <div class="FazerRelatos">
+        <h1 id="Titulo">Faça seu Relato</h1>
+        <form class="Relato">
+            <div class="CampoTexto">
+                <textarea data-ls-module="charCounter" maxlength="1000" style="margin: 0px; height: 164px; width: 261px;" id="RelatoTexto"
                     placeholder="Nos conte o que viu..." cols="30" rows="5"></textarea>
-            </p>
+            </div>
             <p>
-                <input type="checkbox" id="Anonimo" checked> Anonimo
-                <div id="Email" >
-
+                <div class="CheckAnonimo" id="Anonimato">
+                    <input type="checkbox" id="Anonimo" onclick="alteraEmail()" checked> Anônimo
+                </div>
+                <div class="Identificacao" id="Email" style="display:none">
+                    E-mail: <textarea data-ls-module="charCounter" maxlength="100" style="margin: 0px; height: 20px; width: 150px;" id="emailID"
+                    placeholder="Digite seu email." cols="30" rows="5"></textarea>
                 </div>
             </p>
-            <p>
+            <div class="OpçõesCategorias">
                 Categoria:
                 <select id="Tipo">
                     <option value="Outros">Outros</option>
@@ -34,14 +37,29 @@
                     <option value="Homofobia">Homofobia</option>
                     <option value="Gordofobia">Gordofobia</option>
                 </select>
-            </p>
-            <p>
-                <input type="button" onclick="enviarRelato()" value="Enviar">
-            </p>
+            </div>
+            <div class="BotaoEnvio">
+                <input id="Envio" type="button" onclick="enviarRelato()" value="Enviar">
+            </div>
         </form>
     </div>
-    <div id="timeline">
+    <!--<p>-------------------------------------------------------</p>-->
+    <div class="CorpoVisualisacao">
+        <div class="OpçõesCategorias">
+            Categoria:
+            <select id="Categoria">
+                <option value="Todos">Todos</option>
+                <option value="Outros">Outros</option>
+                <option value="Racismo">Racismo</option>
+                <option value="Machismo">Machismo</option>
+                <option value="Homofobia">Homofobia</option>
+                <option value="Gordofobia">Gordofobia</option>
+            </select>
+            <input id="Filtro" type="button" onclick="listar()" value="Filtrar">
+        </div>
+        <div class="Listagem de Relatos" id="timeline">
 
+        </div>
     </div>
 </body>
 
