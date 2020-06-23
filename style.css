@@ -1,0 +1,64 @@
+body{background-color: rgb(29, 27, 27);
+    font-family:  Courier, "Lucida Console", monospace ;
+    color: #f8f8f8f3;
+    
+}
+
+.Titul {
+    height: 100px;
+    width:1400px;
+    color: #f8f8f8f3;
+    font-size: 60px;
+    display: grid;
+    align-items: center ;
+    vertical-align:middle;
+    font-family:  Courier, "Lucida Console", monospace;
+    
+ 
+}
+
+.containerheader{
+    margin: 5px;
+    padding-top: 5px;
+    background-color: rgb(51, 49, 49) ;
+    padding: 5px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    border-bottom: rgb(29, 27, 27);
+    }
+
+.logo{
+max-width: 100px;
+max-height: 100px;
+vertical-align:middle;
+
+}
+
+.OpçõesCategorias
+{
+    
+    color:#f8f8f8f3 ;
+    padding-bottom: 30px;
+}
+.CheckAnonimo
+{
+    color:#f8f8f8f3 ;
+
+
+}
+
+
+.CorpoVisualisacao
+{
+    padding-top: 30px;
+}
+.RelatoUnico
+{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right:  20px;
+    border-color: rgb(29, 27, 27) ;
+padding-top: 30px;
+background-color:rgb(51, 49, 49) ;
+padding-bottom: 10px;
+}

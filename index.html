@@ -1,66 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
-<head>    
+<head>
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="Stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="style.css">
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src=".\script.js"></script>
-    <link rel="Stylesheet" type="text/css" href=".\style.css">
+
+
+
     <title>Diz ai! Não se Khale!</title>
+
 </head>
 
 <body>
-    <div class="FazerRelatos">
-        <h1 id="Titulo">Faça seu Relato</h1>
-        <form class="Relato">
-            <div class="CampoTexto">
-                <textarea data-ls-module="charCounter" maxlength="1000" style="margin: 0px; height: 164px; width: 261px;" id="RelatoTexto"
-                    placeholder="Nos conte o que viu..." cols="30" rows="5"></textarea>
+    <header class="containerheader">
+        <div class="row">
+            <div class="col-2">
+                <img src="logo5_200x200.png" class="logo">
             </div>
-            <p>
-                <div class="CheckAnonimo" id="Anonimato">
-                    <input type="checkbox" id="Anonimo" onclick="alteraEmail()" checked> Anônimo
+            <div class="col-10">
+                <div>
+                    <h1 id="Titulo" class="Titul">Diz ai! Não se Khale!</h1>
                 </div>
-                <div class="Identificacao" id="Email" style="display:none">
-                    E-mail: <textarea data-ls-module="charCounter" maxlength="100" style="margin: 0px; height: 20px; width: 150px;" id="emailID"
-                    placeholder="Digite seu email." cols="30" rows="5"></textarea>
-                </div>
-            </p>
-            <div class="OpçõesCategorias">
-                Categoria:
-                <select id="Tipo">
-                    <option value="Outros">Outros</option>
-                    <option value="Racismo">Racismo</option>
-                    <option value="Machismo">Machismo</option>
-                    <option value="Homofobia">Homofobia</option>
-                    <option value="Gordofobia">Gordofobia</option>
-                </select>
             </div>
-            <div class="BotaoEnvio">
-                <input id="Envio" type="button" onclick="enviarRelato()" value="Enviar">
-            </div>
-        </form>
-    </div>
-    <!--<p>-------------------------------------------------------</p>-->
-    <div class="CorpoVisualisacao">
-        <div class="OpçõesCategorias">
-            Categoria:
-            <select id="Categoria">
-                <option value="Todos">Todos</option>
-                <option value="Outros">Outros</option>
-                <option value="Racismo">Racismo</option>
-                <option value="Machismo">Machismo</option>
-                <option value="Homofobia">Homofobia</option>
-                <option value="Gordofobia">Gordofobia</option>
-            </select>
-            <input id="Filtro" type="button" onclick="listar()" value="Filtrar">
         </div>
-        <div class="Listagem de Relatos" id="timeline">
+    </header>
 
+    <div class="container">
+        <div class="row">
+            <div class="col col-9 FazerRelato">
+                <h2>
+                    <center>
+                        Faça seu relato
+                    </center>                    
+                </h2>                
+                <div class="row">
+                    <div class="col col-6">
+                        <div class="CampoTexto">
+                            <textarea data-ls-module="charCounter" maxlength="1000" id="RelatoTexto"
+                                placeholder="Nos conte o que viu..." cols="38" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="row">
+                            <div class="CheckAnonimo" id="Anonimato">
+                                <input type="checkbox" id="Anonimo" onclick="alteraEmail()" checked> Anônimo
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="IdentificacaoEmail" id="Email" style="display:none" href="style.css">
+                                E-mail: <textarea data-ls-module="charCounter" maxlength="100" id="emailID"
+                                    placeholder="Seu email." cols="30" rows="1" nowrap></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="OpçõesCategorias">
+                                    Categoria:                              
+                                <select id="Tipo">
+                                    <option value="Outros">Outros</option>
+                                    <option value="Racismo">Racismo</option>
+                                    <option value="Machismo">Machismo</option>
+                                    <option value="Homofobia">Homofobia</option>
+                                    <option value="Gordofobia">Gordofobia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="BotaoEnvio">
+                                <input id="Envio" type="button" onclick="enviarRelato()" value="Enviar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="CorpoVisualisacao">
+                    <div class="OpçõesCategorias">
+                        Categoria:
+                        <select id="Categoria">
+                            <option value="Todos">Todos</option>
+                            <option value="Outros">Outros</option>
+                            <option value="Racismo">Racismo</option>
+                            <option value="Machismo">Machismo</option>
+                            <option value="Homofobia">Homofobia</option>
+                            <option value="Gordofobia">Gordofobia</option>
+                        </select>
+                        <input id="Filtro" type="button" onclick="listar()" value="Filtrar">
+                    </div>
+                    <div class="ListagemdeRelatos" id="timeline">
+            
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3">
+                <!-- menu lateral -->
+            </div>
         </div>
     </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 </html>

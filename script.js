@@ -12,13 +12,13 @@ function listar () {
         let date = new Date(element.data);
         if(categoria == 'Todos' ||categoria == element.tipo){
             $("#timeline").prepend(`
-            <div class="RelatoUnico">
+            <div class="RelatoUnico col-9">
                 <h4>Categoria: ${element.tipo} -- Data de envio: ${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}</h4>
-                <p>
+                <p class="col-9">
                 ${element.relato}
                 </p>
                 <p><input type="button" onclick="curtida()" value="Curtir"> Curtidas - ${likes}</p>     
-            </div>         
+            </div>                    
         `);
         }
         
@@ -35,10 +35,10 @@ function curtida(num){
 
 
 function enviarRelato() {
-    let relato = $("#Relato").val();
+    let relato = $("#RelatoTexto").val();
     let tipos = $("#Tipo").val();
     let email = $("#emailID").val();
-    $("#Relato").val("");
+    $("#RelatoTexto").val("");
     let date = new Date();
     var likes = 0;
     var lista_relatos = JSON.parse(localStorage.getItem('lista-relatos') || '[]');
