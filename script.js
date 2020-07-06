@@ -151,11 +151,25 @@ function mostrarCat() {
     let lista_categorias = JSON.parse(localStorage.getItem('lista-categoria') || '[]');
     for (let index = 0; index < lista_categorias.length; index++) {
         const element = lista_categorias[index];
-        $("#elementosCat").prepend(`
-            <tr class="row">
-                <td class="col col-md-6">${element.cat}</td>
-                <td class="col col-md-6">${element.resumo}</td>
-            </tr>              
+        $("#elementosCat").append(`
+        <div class=" row">
+              <div class="col col-md-12">          
+              <center>  
+                <h4  style="font-size: 40px;">
+                  Categoria ${index + 1}
+                </h4>
+              </center>
+              <h3>
+                <label style="font-size: 30px;">Categoria:</label>
+                <label>${element.cat}</label>
+              </h3>
+
+              <h3>
+                <label style="font-size: 30px;">Definição:</label>
+                <label>${element.resumo}</label>
+              </h3>
+              <br> 
+            </div>         
         `);
     }
 }
@@ -196,10 +210,10 @@ function listarCategoria() {
     `);
     for (let index = 0; index < lista_categoria.length; index++) {
         const element = lista_categoria[index];
-        $("#CategoriaLista1").prepend(`
+        $("#CategoriaLista1").append(`
             <option value="${element.cat}">${element.cat}</option>
          `);
-        $("#CategoriaLista2").prepend(`
+        $("#CategoriaLista2").append(`
             <option value="${element.cat}">${element.cat}</option>         
         `);
     }
@@ -216,7 +230,7 @@ function templateNoticia({
     link,
    }) {            
     return `
-    <div class="col-12 col-sm-12 col-md-6 col-lg-3 h-100" >
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 h-100" >
         <div class="card" style="width: 18rem;">
         <img src="${img}" class="card-img-top" alt="...">
         <div class="card-body">
