@@ -1,7 +1,7 @@
+
 body{background-color: rgb(29, 27, 27);
     font-family:  Courier, "Lucida Console", monospace ;
     color: #f8f8f8f3;
-    
 }
 
 .Titul {
@@ -13,52 +13,120 @@ body{background-color: rgb(29, 27, 27);
     align-items: center ;
     vertical-align:middle;
     font-family:  Courier, "Lucida Console", monospace;
-    
- 
 }
 
-.containerheader{
-    margin: 5px;
-    padding-top: 5px;
+.container{
     background-color: rgb(51, 49, 49) ;
-    padding: 5px;
-    max-width: 100%;
-    margin-bottom: 30px;
-    border-bottom: rgb(29, 27, 27);
-    }
+}
 
 .logo{
 max-width: 100px;
 max-height: 100px;
 vertical-align:middle;
-
 }
 
 .OpçõesCategorias
 {
-    
     color:#f8f8f8f3 ;
     padding-bottom: 30px;
 }
 .CheckAnonimo
 {
     color:#f8f8f8f3 ;
-
-
 }
-
 
 .CorpoVisualisacao
 {
     padding-top: 30px;
 }
+
 .RelatoUnico
 {
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right:  20px;
     border-color: rgb(29, 27, 27) ;
-padding-top: 30px;
-background-color:rgb(51, 49, 49) ;
-padding-bottom: 10px;
+    padding-top: 30px;
+    background-color:rgb(51, 49, 49) ;
+    padding-bottom: 10px;
+}
+
+.card{
+    color:#f8f8f8f3 ;
+    background-color: rgb(51, 49, 49);
+    margin-bottom: 40px;
+    border-color:  rgb(29, 27, 27);;
+    }
+
+.CheckTelefone
+{
+    padding-left: 50px;
+}
+.listaTelefone{
+    width: 50% !important; 
+    margin: auto;
+    font-size: 30px;
+    background-color: rgb(51, 49, 49);
+}
+.form-telefone{
+  margin: auto;
+  width: 50%;
+}
+.listaCategorias{
+    width: 50% !important; 
+    margin: auto;
+    font-size: 30px;
+    background-color: rgb(51, 49, 49);
+
+}
+#form-telefone .ContatoTelefone{
+    width: 400px; 
+    height: 150px; 
+    left: 35%; 
+    margin: -130px 0 0 -210px; 
+    padding:10px;
+    position: absolute; 
+    top: 25%;
+}
+#form-telefone .NumeroTelefone{
+    width: 400px; 
+    height: 150px; 
+    left: 125%; 
+    margin: -130px 0 0 -210px; 
+    padding: 10px;
+    position: absolute; 
+    top: 25%;
+}
+#form-telefone .emailTelefone{
+    width: 400px; 
+    height: 150px; 
+    left: 200%; 
+    margin: -130px 0 0 -210px; 
+    padding:10px;
+    position: absolute; 
+    top: 25%;
+}
+#form-categoria{
+    width: 400px; 
+    height: 150px;
+    left: 25%;
+    position: absolute; 
+    top: 18%;
+}
+.catg{
+  padding-left: 250px;
+}
+.box{
+  padding-left: 50px;
+}
+.butao{
+  padding-right: 10px;
+}
+
+container-header {
+  margin-bottom: 20px;
+}
+
+.btnCemPorCento {
+  width: 100% !important;
 }

@@ -1,0 +1,109 @@
+<html lang="br">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js">
+
+	</script>
+	<script type="text/javascript" src=".\script.js">
+
+	</script>
+	<title>Cadastros</title>
+	<link href="https://fonts.googleapis.com/css?family=Tangerine&amp;_cacheOverride=1593041643766" rel="Stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css?_cacheOverride=1593041643767"
+	 integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?_cacheOverride=1593041643769">
+	<link rel="Stylesheet" href="http://127.0.0.1:5500/style.css?_cacheOverride=1593041643770">
+	<link rel="Stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col col-md-2">
+				<img src="logo5_200x200.png" class="logo">    
+      </div>
+    <div class="col col-md-2">
+        <h1 id="Titulo" class="Titul">Não se Khale!</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-3">
+      <a href="index.html">
+        <h3>
+          <center>Denuncias</center>          
+        </h3>         
+      </a>
+    </div>
+    <div class="col col-md-3">
+      <a href="noticias.html">
+        <h3>
+          <center>Noticias</center>
+        </h3>
+      </a>
+    </div>
+    <div class="col col-md-3">
+      <a href="categorias.html">
+        <h3>
+          <center>Categorias</center>
+        </h3>
+      </a>
+    </div>
+    <div class="col col-md-3">
+      <a href="contatos.html">
+        <h3>
+          <center>Contatos</center>
+        </h3>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-md-12">
+      <center>
+        <h4> <input type="checkbox" id="TelCheck" onclick="mostrarTel()"> Cadastrar Novo Contato </h4>
+      </center>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-12" id="formTel" style="display: none;">
+      <form style="text-align: center;">
+        <center>
+        <div class="row">
+          <div class="col">
+            <label>Nome</label>
+            <input type="text" class="form-control" id="contatoTel" placeholder="Nome do contato">
+          </div>
+          <div class="col">
+            <label>Telefone</label>
+            <input type="text" class="form-control" id="numTel" placeholder="Telefone do Contato">
+          </div>
+          <div class="col">
+            <label>E-mail</label>
+            <input type="email" class="form-control" id="EmailTel" placeholder="E-mail do contato">
+          </div>
+        </div>
+        </center>
+      </form>
+      <br>
+      <center>
+        <button id="Envio" type="button" class="btn btn-success" onclick="enviarTelefone()">Enviar</button>
+      </center>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-md-12">
+      <div id="elementosTel">
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
